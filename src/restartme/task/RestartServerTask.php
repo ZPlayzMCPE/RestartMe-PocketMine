@@ -3,16 +3,16 @@
 namespace restartme\task;
 
 use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 use restartme\RestartMe;
 
-class RestartServerTask extends PluginTask{
+class RestartServerTask extends Task {
     /** @var RestartMe */
     private $plugin;
     /**
      * @param RestartMe $plugin
      */
     public function __construct(RestartMe $plugin){
-        parent::__construct($plugin);
         $this->plugin = $plugin;
     }
     /**
