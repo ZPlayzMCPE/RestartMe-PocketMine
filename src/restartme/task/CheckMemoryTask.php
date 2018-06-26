@@ -2,18 +2,17 @@
 
 namespace restartme\task;
 
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 use restartme\utils\Utils;
 use restartme\RestartMe;
 
-class CheckMemoryTask extends PluginTask{
+class CheckMemoryTask extends Task {
     /** @var RestartMe */
     private $plugin;
     /**
      * @param RestartMe $plugin
      */
     public function __construct(RestartMe $plugin){
-        parent::__construct($plugin);
         $this->plugin = $plugin;
     }
     /**
